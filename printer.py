@@ -1,7 +1,7 @@
 import gdb
 import re
 
-class StdStringPrinter:
+class Integer_Vectors:
     def __init__(self, val):
         self.val = val
 
@@ -33,7 +33,7 @@ def str_lookup_function(val):
     #regex = re.compile("^show_vector_append__integer_vectors__vector$")
     regex = re.compile("^.*integer_vectors__vector$")
     if regex.match(lookup_tag):
-        return StdStringPrinter(val)
+        return Integer_Vectors(val)
     return None
 
 def register_printers():
